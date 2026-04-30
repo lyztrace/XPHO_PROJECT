@@ -1,0 +1,110 @@
+[
+  {
+    "标注基础信息": {
+      "来源": "模型-老师",
+      "补充": "（看模板，补充额外信息，如果没有就留空）",              
+      "年份": "2026", 
+      "版块1": "Q1（PS:严格按照模板格式）",      
+      "版块2": "Part-A（PS:严格按照模板格式，需要带有横线）",      
+      "版块3": "A1（PS:严格按照模板格式）"
+    },
+    "题目信息": {
+      "背景信息": "（公式表、物理常数表、专用符号定义等提供给考生参考的信息（如无则留空））",     
+      "上下文": "(这是一个例子，可以对着md文件、标注模板仔细看看) # Orbital Decay and Electro-Thermal Equilibrium of an Electrodynamic Tether\n\n### Introduction\nElectrodynamic tethers (EDTs) are long conducting wires used to exchange energy and momentum with a planetary magnetic field. In this problem, we consider an EDT system consisting of two identical small satellites, each of mass $m$, connected by a thin, straight, conductive tether of length $L$ and total resistance $R$. The system orbits the Earth in the equatorial plane at an altitude within the ionosphere. Due to the gravity gradient, the tether is stabilized in a radial orientation, pointing toward the Earth’s center.\n\n**Useful Information:**\n*   The Earth’s magnetic field can be modeled as a magnetic dipole. In the equatorial plane, the magnetic field is strictly perpendicular to the orbital plane.\n*   The magnitude of the magnetic field at a distance $r$ from the Earth's center is given by:\n    $$B(r) = B_0 \\left( \\frac{R_E}{r} \\right)^3$$\n    where $R_E$ is the Earth's radius and $B_0$ is the magnetic field strength at the surface on the equator.\n*   The mechanical energy of a circular orbit with radius $r$ for a total mass $M_{tot}$ is $E = -\\frac{G M_E M_{tot}}{2r}$.\n*   For any $x \\ll 1$, the approximation $(1+x)^n \\approx 1 + nx$ may be used.\n*   The effective emission area of the cathode is $S_{emit} = \\eta S$, where $S$ is the total surface area of the tether and $\\eta$ is a dimensionless factor. \n\n---\n\n### Part A: Orbital Dynamics and Motional EMF (3.0 points)\n\nConsider the tether system initially moving in a stable circular orbit of radius $r$ ($r \\gg L$) in the Earth’s equatorial plane. The mass of the tether is negligible (take $m_{tether} = 0$), so the two satellites are the only significant masses in the system. The center of mass of the system moves at the Keplerian velocity $v$.", 
+      "问题原文": "Using a rotating reference frame centered on the system's center of mass, find the expression for the tension $T_N$ at the midpoint of the tether. Use a first-order Taylor expansion in terms of $L/r$ to simplify your result.",
+      "改造后问题": "由同学们来改造，改造成选择题（需要包含10个带有迷惑性的选项，最终选择一个正确的）、或者填空题，需要可以使用规则来校验答案的正确性，像是证明题、方程、不等式这种就无法用规则来判断正误，但是表达式、数值、选项是可以校验的",
+      "核心思路": "由同学们来改造",
+      "解答过程": "**[A.1's Standard Solution]**\n- **[Physical Principles]**: In a rotating frame centered at the CM (radius $r$) with angular velocity $\\omega = \\sqrt{G M_E / r^3}$, the net radial force on a mass $m$ at distance $x$ from the CM is the sum of the gravitational force and the centrifugal force.\n- **[Equations]**:\n  The effective radial force is:\n  $$F_{eff} = m \\omega^2 (r+x) - \\frac{G M_E m}{(r+x)^2} \\quad (1)$$\n- **[Derivation Steps]**:\n  Using a first-order Taylor expansion for $x \\ll r$:\n  $$F_{eff} \\approx m \\frac{G M_E}{r^3} (r+x) - \\frac{G M_E m}{r^2} \\left(1 - \\frac{2x}{r}\\right) = \\frac{G M_E m}{r^2} \\left(1 + \\frac{x}{r} - 1 + \\frac{2x}{r}\\right) = \\frac{3 G M_E m x}{r^3}$$\n  For the satellite at the outer end ($x = L/2$), the tension $T$ must balance this outward force. Since the tether is massless, the tension $T_N$ at the midpoint is equal to the tension at the ends.\n- **[Final Result]**:\n  $$T_N = \\frac{3 G M_E m L}{2 r^3}$$",
+      "最终答案": [
+          "T_N = \frac{3 G M_E m L}{2 r^3}"
+      ],
+      "改造后答案": [
+          "A(假设改造后是选择，那就是填A)"
+      ],
+      "答案类型": [
+          "expression (从我给的六个类型中进行选择，可以用大模型辅助判断)"
+      ],
+      "改造后答案类型": [
+          "choice"
+      ],
+      "答案单位": [
+          "（备注一下，如果有单位，则需要在这里注明，不要把单位写到最终答案里。如果没有单位，也要写""，而不能直接留空。答案有两个的话就写两行""，用逗号裂开，保证与列表的语法一致）"  
+      ],
+      "改造后答案单位": [
+          "(同上)"
+      ],
+      "关联图片路径": [
+          "image/Figure_1.png",
+          "image/Figure_2.png"
+      ],
+      "模态类型": [
+          "text+data figure （按照图片的类型来标注）",
+          "text+varible figure （按照图片的类型来标注）"
+      ],
+      "难度": "中等"    
+    },
+    "条件提取": {
+      "显性条件": [
+        "（同学们按照专业知识来标注，需要用英文，不可以使用中文，从md文件中提取的显性条件）",
+        "（同学们按照专业知识来标注，需要用英文，不可以使用中文，从md文件中提取的显性条件）",
+        "（同学们按照专业知识来标注，需要用英文，不可以使用中文，从md文件中提取的显性条件）",
+        "（同学们按照专业知识来标注，需要用英文，不可以使用中文，从md文件中提取的显性条件）有多少条显性条件，就标注多少条"
+      ],
+      "隐性条件": [
+        {
+          "条件原文": "（同学们按照专业知识来标注，需要用英文。填写md文件中的某条信息）",
+          "隐藏条件": "（同学们按照专业知识来标注，需要用英文。这条信息背后说明了什么隐藏的条件）"
+        },
+        {
+          "条件原文": "（同学们按照专业知识来标注，需要用英文。填写md文件中的某条信息）",
+          "隐藏条件": "（同学们按照专业知识来标注，需要用英文。这条信息背后说明了什么隐藏的条件）"
+        },
+        {
+          "条件原文": "（同学们按照专业知识来标注，需要用英文。填写md文件中的某条信息）",
+          "隐藏条件": "（同学们按照专业知识来标注，需要用英文。这条信息背后说明了什么隐藏的条件）"
+        }
+      ]
+    },
+    "物理模型": "（同学们按照专业知识来标注，需要用英文。使用了什么物理模型？）", 
+    "关联考点": [
+          ["力学", "运动学", "匀加速质点运动"], # 需要按照老师整理的ipho的三级考纲的考点填写，英文填写
+          ["力学", "动力学", "牛顿第二定律"],
+          ["光学", "波的传播", "非均匀介质"]
+      ],
+    "物理场景": "（同学们按照专业知识来标注，需要用英文。本条数据涉及的物理场景是什么？）", 
+    "判分标准": [
+        "（参考md文件中的评分标准，抽取出本题的分步骤得分的得分点和分值，按照下面的格式来填写）",
+        "Award 0.1 pt if the answer correctly sets up the exponent equation $1 = \\delta - 3$. Otherwise, award 0 pt.",
+        "Award 0.1 pt if the answer obtains the correct value $\\beta = 2$. Otherwise, award 0 pt.",
+        "Award 0.1 pt if the answer obtains the correct value $\\gamma = -1$. Otherwise, award 0 pt.",
+        "Award 0.1 pt if the answer obtains the correct value $\\delta = 4$. Otherwise, award 0 pt."
+    ],
+    "错误解题步骤": [
+        "(暂时不标注)"
+    ],
+    "多解法标注": [
+      {
+        "核心思路": "（同学们按照专业知识来标注，需要用英文。）", 
+        "关键步骤": [
+          "（同学们按照专业知识来标注，需要用英文。）", 
+          "1. 由平行轴定理计算圆盘对接触点转动惯量：$J' = J + MR^2 = \\frac{1}{2}MR^2 + MR^2 = \\frac{3}{4}MR^2$",
+          "2. 合外力矩由重力与支持力的力矩差提供，$M_{\\text{合}} = \\mu MgR$，由动量矩定理 $M_{\\text{合}} = J'\\alpha$ 求解角加速度 $\\alpha$",
+          "3. 结合平动运动学公式 $v_c = a_ct$、转动公式 $\\omega = \\omega_0 - \\alpha t$，代入纯滚动约束 $v_c = \\omega R$ 联立",
+          "4. 代入数值计算得 $t = \\frac{5}{3}\\text{s}$、$\\omega = \\frac{10}{3}\\text{rad/s}$，结果与常规解法一致"
+        ],
+        "解答过程": "（同学们按照专业知识来标注，需要用英文。）",
+        "适用场景": "（同学们按照专业知识来标注，需要用英文。）"
+      }
+    ]
+  },
+  {  
+      "标注基础信息": {
+      "来源": "IPhO",
+      "补充": "竞赛真题",              
+      "年份": "2025", 
+      "版块1": "Q1",
+      "版块2": "Part-A",      
+      "版块3": "A2"
+    }
+  }
+]
