@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PhysicsCompetitionAnnotationNew",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "标注基础信息",
+      "题目信息",
+      "条件提取",
+      "物理模型",
+      "关联考点",
+      "物理场景",
+      "判分标准",
+      "错误解题步骤",
+      "多解法标注"
+    ],
+    "properties": {
+      "标注基础信息": {
+        "type": "object",
+        "required": ["来源", "年份", "版块1"],
+        "properties": {
+          "来源": {"type": "string"},
+          "补充": {"type": "string"},
+          "年份": {"type": "string"},
+          "版块1": {"type": "string"},
+          "版块2": {"type": "string"},
+          "版块3": {"type": "string"}
+        }
+      },
+      "题目信息": {
+        "type": "object",
+        "required": ["背景信息", "上下文", "问题原文", "改造后问题", "核心思路", "解答过程", "最终答案", "改造后答案", "答案类型", "改造后答案类型", "答案单位", "改造后答案单位", "关联图片路径", "模态类型", "难度"],
+        "properties": {
+          "背景信息": {"type": "string"},
+          "上下文": {"type": "string"},
+          "问题原文": {"type": "string"},
+          "改造后问题": {"type": "string"},
+          "核心思路": {"type": "string"},
+          "解答过程": {"type": "string"},
+          "最终答案": {"type": "array", "items": {"type": "string"}},
+          "改造后答案": {"type": "array", "items": {"type": "string"}},
+          "答案类型": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["expression", "numerical", "choice", "equation", "open-ended", "inequality"]
+            }
+          },
+          "改造后答案类型": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["expression", "numerical", "choice", "equation", "open-ended", "inequality"]
+            }
+          },
+          "答案单位": {"type": "array", "items": {"type": "string"}},
+          "改造后答案单位": {"type": "array", "items": {"type": "string"}},
+          "关联图片路径": {"type": "array", "items": {"type": "string"}},
+          "模态类型": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["text-only", "text+illustration figure", "text+variable figure", "text+data figure"]
+            }
+          },
+          "难度": {"type": "string", "enum": ["easy", "medium", "hard", ""]}
+        }
+      },
+      "条件提取": {
+        "type": "object",
+        "required": ["显性条件", "隐性条件"],
+        "properties": {
+          "显性条件": {"type": "array", "items": {"type": "string"}},
+          "隐性条件": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["条件原文", "隐藏条件"],
+              "properties": {
+                "条件原文": {"type": "string"},
+                "隐藏条件": {"type": "string"}
+              }
+            }
+          }
+        }
+      },
+      "物理模型": {"type": "string"},
+      "关联考点": {
+        "type": "array",
+        "items": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {"type": "string"}
+        }
+      },
+      "物理场景": {"type": "string"},
+      "判分标准": {
+        "type": "array",
+        "items": {"type": "string"}
+      },
+      "错误解题步骤": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["步骤序号", "考生作答", "正误判定", "考生实得分", "错误原因", "修正建议"],
+          "properties": {
+            "步骤序号": {"type": "integer"},
+            "考生作答": {"type": "string"},
+            "正误判定": {"type": "string", "enum": ["correct", "wrong"]},
+            "考生实得分": {"type": "number"},
+            "错误原因": {"type": "string"},
+            "修正建议": {"type": "string"}
+          }
+        }
+      },
+      "多解法标注": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["核心思路", "关键步骤", "解答过程", "适用场景"],
+          "properties": {
+            "核心思路": {"type": "string"},
+            "关键步骤": {"type": "array", "items": {"type": "string"}},
+            "解答过程": {"type": "string"},
+            "适用场景": {"type": "string"}
+          }
+        }
+      }
+    }
+  }
+}

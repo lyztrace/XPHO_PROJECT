@@ -1,0 +1,13 @@
+# MVP 中间产物
+work/
+refs/
+__pycache__/
+*.pyc
+.DS_Store
+
+# 标注项目不追踪虚拟环境
+.venv/
+venv/
+
+# LLM 密钥文件（.env.example 是模板，可以提交；.env 含真实密钥，不可提交）
+.env
